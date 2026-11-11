@@ -34,7 +34,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: national-energy-apk
+          name: national-energy-execution-apk
           path: national-energy.apk
 
       - name: Publish release

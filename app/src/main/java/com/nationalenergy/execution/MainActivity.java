@@ -1,4 +1,4 @@
-package com.nationalenergy.survey;
+package com.nationalenergy.execution;
 
 import android.Manifest;
 import android.app.Activity;
@@ -31,7 +31,7 @@ import java.io.OutputStream;
 public class MainActivity extends Activity {
 
     private static final String START_URL = "https://appassets.androidplatform.net/assets/index.html";
-    private static final String AUTHORITY = "com.nationalenergy.survey.fileprovider";
+    private static final String AUTHORITY = "com.nationalenergy.execution.fileprovider";
     private static final int REQ_FILE = 101;
     private static final int REQ_PERM = 102;
 
@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
                     ContentValues v = new ContentValues();
                     v.put(MediaStore.MediaColumns.DISPLAY_NAME, name);
                     v.put(MediaStore.MediaColumns.MIME_TYPE, "application/pdf");
-                    v.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/الطاقة الوطنية");
+                    v.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/الطاقة الوطنية - التنفيذ");
                     Uri uri = getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, v);
                     if (uri == null) return "error: insert";
                     try (OutputStream os = getContentResolver().openOutputStream(uri)) {
@@ -169,7 +169,7 @@ public class MainActivity extends Activity {
                         os.write(bytes);
                     }
                 } else {
-                    File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "الطاقة الوطنية");
+                    File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "الطاقة الوطنية - التنفيذ");
                     dir.mkdirs();
                     try (FileOutputStream fos = new FileOutputStream(new File(dir, name))) {
                         fos.write(bytes);
@@ -205,7 +205,7 @@ public class MainActivity extends Activity {
     }
 
     private static String cleanName(String n) {
-        if (n == null || n.trim().isEmpty()) n = "تقرير_كشف.pdf";
+        if (n == null || n.trim().isEmpty()) n = "تقرير_تنفيذ.pdf";
         n = n.replaceAll("[\\\\/:*?\"<>|]", "_");
         if (!n.toLowerCase().endsWith(".pdf")) n += ".pdf";
         return n;

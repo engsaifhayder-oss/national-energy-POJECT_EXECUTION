@@ -23,7 +23,7 @@
         </activity>
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.nationalenergy.survey.fileprovider"
+            android:authorities="com.nationalenergy.execution.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
