@@ -43,6 +43,6 @@ jobs:
         run: |
           gh release delete latest --yes --cleanup-tag || true
           gh release create latest national-energy.apk \
-            --title "كشف الطاقة الوطنية – الإصدار 1.${{ github.run_number }}" \
-            --notes "آخر نسخة من تطبيق الكشف. حمّل ملف national-energy.apk وثبّته على الهاتف." \
+            --title "تطبيق تنفيذ الطاقة الوطنية – الإصدار 1.${{ github.run_number }}" \
+            --notes "آخر نسخة من تطبيق تنفيذ الطاقة الوطنية. حمّل ملف national-energy.apk وثبّته على الهاتف." \
             --latest
