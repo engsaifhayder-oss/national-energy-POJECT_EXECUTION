@@ -7,6 +7,10 @@
 ## التنزيل
 **[⬇️ تحميل التطبيق (APK)](https://github.com/engsaifhayder-oss/national-energy-POJECT_EXECUTION/releases/latest/download/national-energy.apk)**
 
+## للآيفون
+افتح الرابط في **Safari**: https://engsaifhayder-oss.github.io/national-energy-POJECT_EXECUTION/
+ثم زر المشاركة ⬆️ ← **إضافة إلى الشاشة الرئيسية**.
+
 ## كيف يعمل البناء
 - واجهة التطبيق كلها في `index.html`.
 - عند كل تعديل يُرفع إلى فرع `main`، يبني GitHub Actions ملف APK موقّع تلقائياً وينشره في صفحة Releases بنفس رابط التحميل أعلاه.
